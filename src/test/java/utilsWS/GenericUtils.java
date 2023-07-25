@@ -1,4 +1,4 @@
-package utils;
+package utilsWS;
 
 import org.openqa.selenium.WebDriver;
 

@@ -1,8 +1,7 @@
-package utils;
+package utilsWS;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class TestBase {
     public static WebDriver driver;

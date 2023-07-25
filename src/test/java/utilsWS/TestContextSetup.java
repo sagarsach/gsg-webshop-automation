@@ -1,12 +1,10 @@
-package utils;
+package utilsWS;
 
-import org.openqa.selenium.WebDriver;
 import pageObjects.PageObjectManager;
 
 import java.io.IOException;
 
 public class TestContextSetup {
-	public String landingPageProductName;
 	public PageObjectManager pageObjectManager;
 	public TestBase testBase;
 	public GenericUtils genericUtils;

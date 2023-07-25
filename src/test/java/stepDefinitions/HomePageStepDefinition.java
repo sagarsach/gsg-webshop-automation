@@ -5,34 +5,22 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import pageObjects.HomePage;
 import pageObjects.LandingPage;
 import utilsWS.TestContextSetup;
 
 import java.io.IOException;
 
-public class LandingPageStepDefinition {
+public class HomePageStepDefinition {
 
     TestContextSetup testContextSetup = new TestContextSetup();
-    LandingPage landingPage = testContextSetup.pageObjectManager.getLandingPage();
+    HomePage homePage = testContextSetup.pageObjectManager.getHomePage();
 
-    public LandingPageStepDefinition() throws IOException {
-    }
-
-    @Given("User is on landing page")
-    public void user_is_on_landing_page() {
-    }
-
-    @When("User login in to application with username {} and password {}")
-    public void userLoginInToApplicationWithUsernameAndPassword(String username, String password) throws InterruptedException {
-        landingPage.loginToWebApp(username,password);
-    }
-
-    @Then("Home page is populated")
-    public void homePageIsPopulated() throws InterruptedException {
-        Assert.assertTrue(landingPage.verifyHomePageIsPopulated());
+    public HomePageStepDefinition() throws IOException {
     }
 
     @And("I sign out of the application")
     public void iSignOutOfTheApplication() {
+        homePage.logoutFromWebApp();
     }
 }
