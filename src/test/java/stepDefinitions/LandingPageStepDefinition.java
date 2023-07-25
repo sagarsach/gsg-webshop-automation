@@ -31,4 +31,14 @@ public class LandingPageStepDefinition {
     public void homePageIsPopulated() throws InterruptedException {
         Assert.assertTrue(landingPage.verifyHomePageIsPopulated());
     }
+
+    @When("I click on Sign up link")
+    public void iClickOnSignUpLink() throws InterruptedException {
+        landingPage.clickSignUpLink();
+    }
+
+    @And("I click on Sign in button")
+    public void iClickOnSignInButton() {
+        landingPage.clickSignInLink();
+    }
 }
